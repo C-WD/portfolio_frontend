@@ -7,6 +7,7 @@ import { AddButtonComponent } from './add-button/add-button.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ServicosComponent } from './components/servicos/servicos.component';
 import { ServicoCardComponent } from './components/servico-card/servico-card.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,11 +15,12 @@ import { ServicoCardComponent } from './components/servico-card/servico-card.com
     AddButtonComponent,
     HomeComponent,
     ServicosComponent,
-    ServicoCardComponent
+    ServicoCardComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [
     provideClientHydration()
