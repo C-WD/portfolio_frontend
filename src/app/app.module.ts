@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddButtonComponent } from './add-button/add-button.component';
 import { HomeComponent } from './pages/home/home.component';
+import { ServicosComponent } from './components/servicos/servicos.component';
+import { ServicoCardComponent } from './components/servico-card/servico-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddButtonComponent,
-    HomeComponent
+    HomeComponent,
+    ServicosComponent,
+    ServicoCardComponent
   ],
   imports: [
     BrowserModule,
