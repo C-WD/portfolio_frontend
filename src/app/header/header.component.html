@@ -1,25 +1,27 @@
 <section class="header">
-    <div class="header-logo">
-        Logo
-    </div>
-    <div class="header-links-web">
-        <div *ngFor="let link of header.links"><a href="{{link.href}}">{{link.text}}</a></div>
-    </div>
-    <div class="dots" (click)="toggleHeaderOpened()" [class.opened]="headerOpened">
-        <div class="dot-container1">
-            <div class="dot"></div>
-        </div>
-        <div class="dot-container2">
-            <div class="dot"></div>
-        </div>
-        <div class="dot-container3">
-            <div class="dot"></div>
-        </div>
-        <div class="dot-container4">
-            <div class="dot"></div>
-        </div>
-    </div>
-    <div class="header-links-mobile" [class.link-opened]="headerOpened" [class.link-flex]="mobileFlex">
-        <div *ngFor="let link of header.links"><a href="{{link.href}}">{{link.text}}</a></div>
+    <div>
+      <div class="header-logo">
+          Logo
+      </div>
+      <div class="header-links-web">
+          <div *ngFor="let link of header.links"><a href="{{link.href}}">{{link.text}}</a></div>
+      </div>
+      <div class="dots" (click)="toggleHeaderOpened()" [class.opened]="headerOpened">
+          <div class="dot-container1">
+              <div class="dot"></div>
+          </div>
+          <div class="dot-container2">
+              <div class="dot"></div>
+          </div>
+          <div class="dot-container3">
+              <div class="dot"></div>
+          </div>
+          <div class="dot-container4">
+              <div class="dot"></div>
+          </div>
+      </div>
+      <div class="header-links-mobile" [class.link-opened]="headerOpened" [class.link-flex]="mobileFlex">
+          <div *ngFor="let link of header.links"><a href="{{link.href}}">{{link.text}}</a></div>
+      </div>
     </div>
 </section>

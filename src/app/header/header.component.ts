@@ -1,4 +1,4 @@
-import { Component, Renderer2} from '@angular/core';
+import { Component } from '@angular/core';
 import { Header } from '../models/header.interface';
 
 @Component({
@@ -7,14 +7,14 @@ import { Header } from '../models/header.interface';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  public headerOpened:Boolean = false;
-  public mobileFlex:Boolean = false;
+  public headerOpened: boolean = false;
+  public mobileFlex: boolean = false;
   timeoutRunning: boolean = false;
-  public header: Header = 
+  public header: Header =
       {
       logo: "assets/example01.png",
       links: [
-        { text: 'About', href: 'href1' },
+        { text: 'Sobre', href: '/sobre' },
         { text: 'Work', href: 'href2' },
         { text: 'Contact', href: 'href2' }
       ]
@@ -24,7 +24,7 @@ export class HeaderComponent {
         if (this.mobileFlex) {
           this.headerOpened = !this.headerOpened;
           this.timeoutRunning = true;
-    
+
           setTimeout(() => {
             this.mobileFlex = !this.mobileFlex;
             this.timeoutRunning = false;
@@ -32,7 +32,7 @@ export class HeaderComponent {
         } else {
           this.mobileFlex = !this.mobileFlex;
           this.timeoutRunning = true;
-    
+
           setTimeout(() => {
             this.headerOpened = !this.headerOpened;
             this.timeoutRunning = false;

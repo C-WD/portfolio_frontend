@@ -1,0 +1,86 @@
+@mixin mobileG(){
+  @media screen and (min-width: 480px) {
+    @content;
+  }
+}
+
+.biografia{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 7.5rem;
+  padding-top: 7.5rem;
+
+  > div{
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 3.75rem);
+    align-items: center;
+
+    @include mobileG(){
+      flex-direction: row;
+      justify-content: center;
+      gap: 4.375rem;
+    }
+  }
+}
+
+.biografia_esquerda{
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 3.75rem);
+  max-width: 31.25rem;
+
+  @include mobileG(){
+    max-width: 12.1875rem;
+  }
+
+  > img{
+    width: 12.1875rem;
+    height: 12.1875rem;
+    object-fit: cover;
+  }
+
+  > h2{
+    margin-top: 1.25rem;
+    line-height: 1.6875rem;
+    font-size: 1.0625rem;
+    font-weight: 700;
+  }
+
+  > h3{
+    line-height: 1.6875rem;
+    font-size: 1.0625rem;
+    font-weight: 400;
+  }
+}
+
+.biografia_direita{
+  display: flex;
+  flex-direction: column;
+  margin-top: 4.875rem;
+  width: calc(100% - 3.75rem);
+  max-width: 31.25rem;
+
+  @include mobileG(){
+    margin-top: 0;
+    max-width: 46.5625rem;
+  }
+
+  > h2{
+    margin-top: 1.25rem;
+    line-height: 1.6875rem;
+    font-size: 1.0625rem;
+    font-weight: 700;
+
+    @include mobileG(){
+      margin-top: 0;
+    }
+  }
+
+  > h3{
+    line-height: 1.6875rem;
+    font-size: 1.0625rem;
+    font-weight: 400;
+  }
+}
