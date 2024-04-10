@@ -1,4 +1,4 @@
-<div class="contato">
+<section class="contato">
   <div>
     <div class="contato__left">
       <h2>Let’s work together</h2>
@@ -12,24 +12,24 @@
       </ul>
     </div>
     <form class="contato__right">
-      <div [class.teste]="listaClasses.includes('nome')">
+      <div>
         <label for="nome">Nome</label>
         <input type="text" name="nome" id="nome" [(ngModel)]="nome" required
-        (focus)="adicionarClasse($event.target)" (blur)="removerClasse($event.target)">
+        (focus)="adicionarClasse($event.target)" (blur)="removerClasse($event.target)" autocomplete="off">
       </div>
-      <div [class.teste]="">
+      <div>
         <label for="email">Email</label>
         <input type="email" name="email" id="email" [(ngModel)]="email" required
-        (focus)="adicionarClasse($event.target)" (blur)="removerClasse($event.target)">
-        >
+        (focus)="adicionarClasse($event.target)" (blur)="removerClasse($event.target)" autocomplete="off">
       </div>
-      <div [class.teste]="">
-        <label for="mensagem">Digite sua mensagem aqui</label>
+      <div>
+        <label for="mensagem" class="contato_label">Digite sua mensagem aqui</label>
         <textarea name="mensagem" id="mensagem" [(ngModel)]="mensagem" required
-        (focus)="adicionarClasse($event.target)" (blur)="removerClasse($event.target)">
-      </textarea>
+        (focus)="adicionarClasse($event.target)" (blur)="removerClasse($event.target)"></textarea>
       </div>
-      <button (click)="enviarContato()">Enviar</button>
+      <div class="contato_botao">
+        <button type="submit" (click)="enviarContato()">Enviar</button>
+      </div>
     </form>
   </div>
-</div>
+</section>

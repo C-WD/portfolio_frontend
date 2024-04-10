@@ -41,17 +41,13 @@ export class ContatoComponent {
     console.log(this.mensagem);
   }
 
-  public onFocus(evento: FocusEvent){
-    if(evento.target instanceof HTMLInputElement){
-      this.listaClasses.push(evento.target.name);
+  adicionarClasse(target: any) {
+    this.renderer.addClass(this.renderer.parentNode(target), 'ativo');
+  }
+
+  removerClasse(target: any) {
+    if(target.value == ''){
+      this.renderer.removeClass(this.renderer.parentNode(target), 'ativo');
     }
-  }
-
-  adicionarClasse(event: any) {
-    this.renderer.addClass(this.renderer.parentNode(event), 'ativo');
-  }
-
-  removerClasse(event: any) {
-    this.renderer.removeClass(this.renderer.parentNode(event), 'ativo');
   }
 }

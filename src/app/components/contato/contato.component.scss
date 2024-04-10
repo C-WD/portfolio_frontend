@@ -1,13 +1,24 @@
+@mixin tablet(){
+  @media screen and (min-width: 800px) {
+    @content;
+  }
+}
+
 .contato{
   display: flex;
-  width: 100vw;
+  width: 100%;
   justify-content: center;
 
   > div{
     display: flex;
     flex-direction: column;
-    width: calc(100vw - 3.75rem);
+    width: calc(100% - 3.75rem);
     gap: 5.3125rem;
+
+    @include tablet(){
+      flex-direction: row;
+      justify-content: center;
+    }
   }
 }
 
@@ -16,6 +27,11 @@
   gap: 2.5rem;
   display: flex;
   flex-direction: column;
+
+  @include tablet(){
+    width: 50%;
+    max-width: 22.5rem;
+  }
 
   > h2{
     font-size: 2rem;
@@ -43,6 +59,11 @@
   flex-direction: column;
   gap: 1.25rem;
 
+  @include tablet(){
+    width: 50%;
+    max-width: 35.625rem;
+  }
+
   > div{
     position: relative;
 
@@ -54,6 +75,11 @@
       color: #2D2D2D;
       font-size: 1.0625rem;
       font-family: "Epilogue", sans-serif;
+      transition: all 0.3s;
+
+      &.contato_label{
+        top: 2.1563rem;
+      }
     }
 
     > input{
@@ -69,9 +95,38 @@
       height: calc(14.4375rem - 2.625rem);
       background-color: #F3F3F3;
       border: none;
+      border-top: 1.9375rem solid #F3F3F3;
       width: calc(100% - 3.75rem);
-      padding: 1.3125rem 1.875rem;
+      padding: 0 1.875rem 1.3125rem 1.875rem;
       outline: none;
+      line-height: 1.9375rem;
     }
+  }
+}
+
+.ativo{
+  > label{
+    top: 30% !important;
+    font-size: 0.625rem !important;
+
+    &.contato_label{
+      top:  1.293rem !important;
+    }
+  }
+}
+
+.contato_botao{
+  margin-top: 2.5rem;
+  padding-bottom: 5rem;
+
+  > button{
+    background-color: #2D2D2D;
+    border: none;
+    color: white;
+    height: 5rem;
+    width: 14.6875rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
   }
 }
