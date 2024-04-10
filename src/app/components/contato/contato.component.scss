@@ -69,7 +69,7 @@
 
     > label{
       position: absolute;
-      top: 50%;
+      top: 2.1563rem;
       transform: translateY(-50%);
       left: 1.875rem;
       color: #2D2D2D;
@@ -101,12 +101,20 @@
       outline: none;
       line-height: 1.9375rem;
     }
+
+    > span{
+      color: red;
+      margin-top: 1.25rem;
+      display: block;
+      width: 100%;
+      margin-left: 1.25rem;
+    }
   }
 }
 
 .ativo{
   > label{
-    top: 30% !important;
+    top: 1.29378rem !important;
     font-size: 0.625rem !important;
 
     &.contato_label{
@@ -128,5 +136,20 @@
     font-size: 1.25rem;
     font-weight: 600;
     cursor: pointer;
+    transition: 0.2s;
+
+    &:disabled{
+      opacity: .5;
+      cursor: initial;
+
+      &:hover{
+        opacity: .5;
+      }
+    }
+
+    &:hover{
+      opacity: 0.9;
+      transition: 0.2s;
+    }
   }
 }

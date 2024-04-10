@@ -1,21 +1,17 @@
-import { Component, Renderer2 } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Social } from '../../models/social.interface';
+import { ContatoService } from '../../services/contatos/contato.service';
 
 @Component({
   selector: 'app-contato',
   templateUrl: './contato.component.html',
-  styleUrl: './contato.component.scss'
+  styleUrls: ['./contato.component.scss']
 })
-export class ContatoComponent {
 
-  constructor(private renderer: Renderer2){}
-
-  public nome: string = "";
-  public email: string = "";
-  public mensagem: string = "";
-
+export class ContatoComponent implements OnInit {
+  public contatoForm!: FormGroup;
   public listaClasses: string[] = [];
-
   public socials: Social[] = [
     {
       nome: "Discord",
@@ -34,11 +30,31 @@ export class ContatoComponent {
     },
   ];
 
-  public enviarContato(): void
-  {
-    console.log(this.nome);
-    console.log(this.email);
-    console.log(this.mensagem);
+  constructor(private renderer: Renderer2, private contatoService: ContatoService) {}
+
+  ngOnInit() {
+    this.contatoForm = new FormGroup({
+      'nome': new FormControl(null, Validators.required),
+      'email': new FormControl(null, [Validators.required, Validators.email]),
+      'mensagem': new FormControl(null, Validators.required)
+    });
+  }
+
+  onSubmit() {
+    if (this.contatoForm.valid) {
+      this.contatoService.enviarContato(
+        this.contatoForm.get('nome')?.value,
+        this.contatoForm.get('email')?.value,
+        this.contatoForm.get('mensagem')?.value
+      );
+    } else {
+      Object.keys(this.contatoForm.controls).forEach(field => {
+        const control = this.contatoForm.get(field);
+        if (control){
+          control.markAsTouched({ onlySelf: true });
+        }
+      });
+    }
   }
 
   adicionarClasse(target: any) {

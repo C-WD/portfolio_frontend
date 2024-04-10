@@ -11,24 +11,27 @@
         </li>
       </ul>
     </div>
-    <form class="contato__right">
+    <form class="contato__right" [formGroup]="contatoForm" (ngSubmit)="onSubmit()">
       <div>
         <label for="nome">Nome</label>
-        <input type="text" name="nome" id="nome" [(ngModel)]="nome" required
+        <input type="text" name="nome" id="nome" formControlName="nome" required
         (focus)="adicionarClasse($event.target)" (blur)="removerClasse($event.target)" autocomplete="off">
+        <span *ngIf="contatoForm.get('nome')!.invalid && contatoForm.get('nome')!.touched">Por favor, insira um nome válido.</span>
       </div>
       <div>
         <label for="email">Email</label>
-        <input type="email" name="email" id="email" [(ngModel)]="email" required
+        <input type="email" name="email" id="email" formControlName="email" required
         (focus)="adicionarClasse($event.target)" (blur)="removerClasse($event.target)" autocomplete="off">
+        <span *ngIf="!contatoForm.get('email')!.valid && contatoForm.get('email')!.touched">Por favor, insira um endereço de email válido.</span>
       </div>
       <div>
         <label for="mensagem" class="contato_label">Digite sua mensagem aqui</label>
-        <textarea name="mensagem" id="mensagem" [(ngModel)]="mensagem" required
+        <textarea name="mensagem" id="mensagem" formControlName="mensagem" required
         (focus)="adicionarClasse($event.target)" (blur)="removerClasse($event.target)"></textarea>
+        <span *ngIf="!contatoForm.get('mensagem')!.valid && contatoForm.get('mensagem')!.touched">Por favor, insira uma mensagem válida.</span>
       </div>
       <div class="contato_botao">
-        <button type="submit" (click)="enviarContato()">Enviar</button>
+        <button type="submit" [disabled]="!contatoForm.get('mensagem')!.valid || !contatoForm.get('email')!.valid || !contatoForm.get('nome')!.valid">Enviar</button>
       </div>
     </form>
   </div>
