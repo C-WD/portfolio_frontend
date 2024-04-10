@@ -16,11 +16,11 @@ export class HomeComponent implements OnInit{
   constructor(private projetoService: ProjetoService, private contatoService: ContatoService){}
 
   ngOnInit(): void {
-    this.projetoService.buscarProjetos().subscribe({
-      next: (response) => {
-        this.projetos = response;
-      },
-      error: (error) => console.log(error)
-    })
+    // this.projetoService.buscarProjetos().subscribe({
+    //   next: (response) => {
+    //     this.projetos = response;
+    //   },
+    //   error: (error) => console.log(error)
+    // })
   }
 }

@@ -1,0 +1,77 @@
+.contato{
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+
+  > div{
+    display: flex;
+    flex-direction: column;
+    width: calc(100vw - 3.75rem);
+    gap: 5.3125rem;
+  }
+}
+
+.contato__left{
+  width: 100%;
+  gap: 2.5rem;
+  display: flex;
+  flex-direction: column;
+
+  > h2{
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 2.625rem;
+    color: #2D2D2D;
+    font-family: "Epilogue", sans-serif;
+  }
+
+  > p{
+    font-size: 1.0625rem;
+    font-weight: 400;
+    line-height: 1.6875rem;
+  }
+
+  > ul{
+    display: flex;
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+  }
+}
+
+.contato__right{
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  > div{
+    position: relative;
+
+    > label{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 1.875rem;
+      color: #2D2D2D;
+      font-size: 1.0625rem;
+      font-family: "Epilogue", sans-serif;
+    }
+
+    > input{
+      height: calc(4.3125rem - 2.625rem);
+      background-color: #F3F3F3;
+      border: none;
+      width: calc(100% - 3.75rem);
+      padding: 1.3125rem 1.875rem;
+      outline: none;
+    }
+
+    > textarea{
+      height: calc(14.4375rem - 2.625rem);
+      background-color: #F3F3F3;
+      border: none;
+      width: calc(100% - 3.75rem);
+      padding: 1.3125rem 1.875rem;
+      outline: none;
+    }
+  }
+}

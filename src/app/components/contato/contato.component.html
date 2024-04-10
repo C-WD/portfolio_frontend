@@ -1,0 +1,35 @@
+<div class="contato">
+  <div>
+    <div class="contato__left">
+      <h2>Let’s work together</h2>
+      <p>This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com</p>
+      <ul>
+        <li *ngFor="let social of socials">
+          <a href="{{social.link}}">
+            <img src="{{social.imagem}}" alt="Acesse o nosso {{social.nome}}">
+          </a>
+        </li>
+      </ul>
+    </div>
+    <form class="contato__right">
+      <div [class.teste]="listaClasses.includes('nome')">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome" [(ngModel)]="nome" required
+        (focus)="adicionarClasse($event.target)" (blur)="removerClasse($event.target)">
+      </div>
+      <div [class.teste]="">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" [(ngModel)]="email" required
+        (focus)="adicionarClasse($event.target)" (blur)="removerClasse($event.target)">
+        >
+      </div>
+      <div [class.teste]="">
+        <label for="mensagem">Digite sua mensagem aqui</label>
+        <textarea name="mensagem" id="mensagem" [(ngModel)]="mensagem" required
+        (focus)="adicionarClasse($event.target)" (blur)="removerClasse($event.target)">
+      </textarea>
+      </div>
+      <button (click)="enviarContato()">Enviar</button>
+    </form>
+  </div>
+</div>
