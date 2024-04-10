@@ -1,0 +1,66 @@
+$padding: 4rem;
+$color: #2D2D2D;
+$transition:0.5s;
+.header {
+    position: fixed;
+    background-color: white;
+    z-index: 40;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    padding-inline: $padding;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header-logo {
+        cursor: default;
+
+        img {
+            display: block;
+            height: 40px;
+        }
+    }
+
+    .header-links {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 10px;
+        justify-content: space-around;
+        width: 30%;
+        max-width: 300px;
+
+        div {
+            transition: $transition;
+
+            &:nth-child(even):hover {
+                transform: rotate(-20deg) !important;
+                display: block;
+            }
+
+            a {
+                transition: $transition;
+                display: block;
+                filter: blur(0.4px);
+                color: $color;
+                text-decoration: none;
+
+                &:visited,
+                &:active {
+                    color: $color;
+                }
+
+                &:hover {
+                    color: black;
+                    filter: blur(0);
+                    scale: 1.2;
+                    transform: rotate(10deg);
+                    display: block;
+                }
+
+
+            }
+        }
+    }
+}
