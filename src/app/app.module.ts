@@ -12,6 +12,7 @@ import { ContatoComponent } from './components/contato/contato.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SobreComponent } from './pages/sobre/sobre.component';
 import { BiografiaComponent } from './components/biografia/biografia.component';
+import { SobreComponentComponent } from './components/sobre-component/sobre-component.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { BiografiaComponent } from './components/biografia/biografia.component';
     ContatoComponent,
     SobreComponent,
     BiografiaComponent,
+    SobreComponentComponent,
   ],
   imports: [
     BrowserModule,

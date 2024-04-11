@@ -14,8 +14,11 @@
     flex-direction: column;
     width: calc(100% - 3.75rem);
     gap: 5.3125rem;
+    border-top: 2px solid #cccccc;
+    padding-top: 4.375rem;
 
     @include tablet(){
+      width: calc(100% - 12.5rem);
       flex-direction: row;
       justify-content: center;
     }

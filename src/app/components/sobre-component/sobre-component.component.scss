@@ -1,0 +1,66 @@
+@mixin tablet(){
+  @media screen and (min-width: 800px) {
+    @content;
+  }
+}
+
+@mixin desktop(){
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+.sobre-component{
+  width: 100%;
+  display: flex;
+  padding: 7.5rem 0;
+  justify-content: center;
+
+  > div{
+    width: calc(100% - 3.75rem);
+    max-width: 55rem;
+
+    @include tablet(){
+      width: calc(100% - 12.5rem);
+    }
+
+    @include desktop(){
+      width: calc(100% - 25rem);
+    }
+
+    > div{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 3.75rem;
+
+      > p{
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 2.25rem;
+      }
+
+      > ul{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.3125rem;
+
+        > li{
+          font-weight: 600;
+          line-height: 1.625rem;
+
+          &.sobre-component_even{
+            background-color: #009379;
+            color: #F6DCE9;
+          }
+
+          &.sobre-component_odd{
+            color: #2B2B2B;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}
