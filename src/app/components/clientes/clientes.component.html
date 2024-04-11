@@ -1,0 +1,12 @@
+<div class="clientes">
+  <div>
+    <h2>Clientes</h2>
+    <div>
+      <swiper-container #swiperContainer class="swiper">
+        <swiper-slide *ngFor="let cliente of clientes">
+          <app-cliente [cliente]="cliente"></app-cliente>
+        </swiper-slide>
+      </swiper-container>
+    </div>
+  </div>
+</div>

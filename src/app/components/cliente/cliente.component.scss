@@ -1,0 +1,63 @@
+.cliente{
+  border: 2px solid #FFD285;
+  background-color: #FFFCF5;
+  width: calc(100% - 5px);
+  height: 21.5rem;
+
+  > div{
+    padding: 1.875rem 1.375rem 1.875rem 1.875rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 3.75rem);
+  }
+}
+
+.cliente_superior{
+  > p{
+    line-height: 1.875rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2D2D2D;
+  }
+}
+
+.cliente_inferior{
+  height: 5.25rem;
+  width: 100%;
+  display: flex;
+  gap: 1.25rem;
+
+  > div:first-child{
+
+    > img{
+      border-radius: 50%;
+    }
+  }
+
+  > div:last-child{
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+
+    > div.classificacao{
+      display: flex;
+      gap: 0.3125rem;
+
+      > svg{
+        width: 1.25rem;
+        height: 1.25rem;
+
+        > path{
+          stroke: black;
+        }
+      }
+    }
+
+    > div.nome_profissao{
+      line-height: 1.6875rem;
+      font-size: 1.0625rem;
+      color: #2D2D2D;
+    }
+  }
+}

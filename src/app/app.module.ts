@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +13,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SobreComponent } from './pages/sobre/sobre.component';
 import { BiografiaComponent } from './components/biografia/biografia.component';
 import { SobreComponentComponent } from './components/sobre-component/sobre-component.component';
+import { ClientesComponent } from './components/clientes/clientes.component';
+import { ClienteComponent } from './components/cliente/cliente.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { SobreComponentComponent } from './components/sobre-component/sobre-comp
     SobreComponent,
     BiografiaComponent,
     SobreComponentComponent,
+    ClientesComponent,
+    ClienteComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +39,7 @@ import { SobreComponentComponent } from './components/sobre-component/sobre-comp
   providers: [
     provideClientHydration()
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

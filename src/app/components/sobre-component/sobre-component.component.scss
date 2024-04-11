@@ -53,6 +53,10 @@
           &.sobre-component_even{
             background-color: #009379;
             color: #F6DCE9;
+
+            @include tablet(){
+              padding: 5px 0;
+            }
           }
 
           &.sobre-component_odd{
