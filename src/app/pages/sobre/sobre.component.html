@@ -1,2 +1,10 @@
-<app-biografia *ngFor="let biografia of biografias" [biografia]="biografia"></app-biografia>
+<swiper-container>
+  <swiper-element>
+  </swiper-element>
+</swiper-container>
+<swiper-container #swiperContainer class="swiper" autohight="true">
+  <swiper-slide *ngFor="let biografia of biografias">
+    <app-biografia [biografia]="biografia"></app-biografia>
+  </swiper-slide>
+</swiper-container>
 <app-sobre-component></app-sobre-component>
