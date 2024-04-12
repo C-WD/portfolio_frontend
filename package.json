@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve -o",
-    "build": "ng build",
+    "start": "node script.js && ng serve -o",
+    "build": "node script.js && ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:portfolio_frontend": "node dist/portfolio_frontend/server/server.mjs"
@@ -21,6 +21,7 @@
     "@angular/platform-server": "^17.3.0",
     "@angular/router": "^17.3.0",
     "@angular/ssr": "^17.3.3",
+    "dotenv": "^16.4.5",
     "express": "^4.18.2",
     "rxjs": "~7.8.0",
     "swiper": "^11.1.1",
