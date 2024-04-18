@@ -17,7 +17,7 @@ export class SobreComponent {
       cor: "#f75700"
     },
     {
-      imagem: 'assets/devs/gabrel.jpg',
+      imagem: 'assets/devs/gabriel.jpg',
       nome: "Gabriel Estéfono",
       profissao: "Desenvolvedor Full Stack, Angular, Next, Flutter, Nest, Node, Laravel, .NET, Vue",
       biografia: "Olooooco, bixo!",
