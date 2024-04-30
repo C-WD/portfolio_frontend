@@ -1,10 +1,10 @@
 <section class="header">
     <div>
       <div class="header-logo">
-          <a href="/">Logo</a>
+          <a routerLink="/">Logo</a>
       </div>
       <div class="header-links-web">
-          <div *ngFor="let link of header.links"><a href="{{link.href}}">{{link.text}}</a></div>
+          <div *ngFor="let link of header.links"><a routerLink="{{link.href}}">{{link.text}}</a></div>
       </div>
       <div class="dots" (click)="toggleHeaderOpened()" [class.opened]="headerOpened">
           <div class="dot-container1">
@@ -21,7 +21,7 @@
           </div>
       </div>
       <div class="header-links-mobile" [class.link-opened]="headerOpened" [class.link-flex]="mobileFlex">
-          <div *ngFor="let link of header.links"><a href="{{link.href}}">{{link.text}}</a></div>
+          <div *ngFor="let link of header.links"><a routerLink="{{link.href}}">{{link.text}}</a></div>
       </div>
     </div>
 </section>
