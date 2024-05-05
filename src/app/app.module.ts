@@ -7,7 +7,6 @@ import { HeaderComponent } from './header/header.component';
 import { ContatoComponent } from './components/contato/contato.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HomeModule } from './pages/home/home.module';
-import { HeroComponent } from './components/hero/hero.component';
 
 @NgModule({
   declarations: [

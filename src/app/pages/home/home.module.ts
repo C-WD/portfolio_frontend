@@ -9,10 +9,9 @@ import { ServicoCardComponent } from '../../components/servico-card/servico-card
 import { ServicosComponent } from '../../components/servicos/servicos.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from '../../app-routing.module';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HeroComponent } from '../../components/hero/hero.component';
+import { ReferencesComponent } from '../../components/references/references.component';
 
 
 
@@ -23,7 +22,8 @@ import { HeroComponent } from '../../components/hero/hero.component';
     ClienteComponent,
     ServicoCardComponent,
     ServicosComponent,
-    HeroComponent
+    HeroComponent,
+    ReferencesComponent,
   ],
   imports: [
     CommonModule,

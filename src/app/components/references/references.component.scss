@@ -1,0 +1,41 @@
+@mixin mobileG() {
+    @media screen and (min-width: 50rem) {
+        @content;
+    }
+}
+
+
+
+.references {
+    max-width: 100%;
+    margin: 0 auto;
+    .line{
+        width: 79%;
+        position: relative;
+        left: -0.4375rem;
+        margin: 0 auto;
+        height: .0625rem;
+        border-top: .125rem solid #cccccc;
+        margin-block: 2rem;
+    }
+}
+
+.flex-holders {
+    max-width: 85%;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .holder{
+        flex-basis: content;
+        display: flex;
+        justify-content: center;
+        img{
+            max-width: 100%;
+            display:block;
+        }
+    }
+}
