@@ -38,7 +38,8 @@ section.hero {
 
         @include mobileG() {
             align-items: center;
-            max-width: 100%!important;
+            max-width: 100% !important;
+
             .title-text {
                 font-size: 4.0625rem !important;
             }
@@ -77,9 +78,9 @@ section.hero {
         @include mobileG() {
 
             img {
-                max-width: 85%!important;
+                max-width: 85% !important;
                 margin-block: 3.75rem;
-                margin-inline:1.875rem;
+                margin-inline: 1.875rem;
             }
         }
 
