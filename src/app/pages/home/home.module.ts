@@ -12,7 +12,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from '../../app-routing.module';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { HeroComponent } from '../../hero/hero.component';
+import { HeroComponent } from '../../components/hero/hero.component';
 
 
 
