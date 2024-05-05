@@ -1,0 +1,89 @@
+@mixin mobileG() {
+    @media screen and (max-width: 50rem) {
+        @content;
+    }
+}
+
+section.hero {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
+    overflow-x: hidden;
+    margin: 0 auto;
+
+    &.mobileFlex-col {
+        @include mobileG() {
+            flex-direction: column;
+            align-items: center;
+
+            .obs-text,
+            .title-text,
+            .top-text {
+                max-width: 90%;
+                text-align: center;
+            }
+        }
+    }
+
+    .flex-col {
+        display: flex;
+        flex-direction: column;
+        color: #2D2D2D;
+        font-style: normal;
+        max-width: 50%;
+
+        @include mobileG() {
+            align-items: center;
+            max-width: 100%!important;
+            .title-text {
+                font-size: 4.0625rem !important;
+            }
+        }
+
+
+        &.gap-30 {
+            gap: 1.875rem;
+        }
+
+        .top-text {
+            font-weight: 600;
+            font-size: 1.25rem;
+            line-height: 1.875rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .title-text {
+            font-weight: 600;
+            font-size: 5rem;
+            line-height: 5.625rem;
+        }
+
+        .obs-text {
+            font-weight: 400;
+            font-size: 1.0625rem;
+            line-height: 1.6875rem;
+        }
+    }
+
+    .heroBanner {
+        display: block;
+        max-width: 24.0625rem;
+
+        @include mobileG() {
+
+            img {
+                max-width: 85%!important;
+                margin-block: 3.75rem;
+                margin-inline:1.875rem;
+            }
+        }
+
+        img {
+            max-width: 100%;
+
+        }
+    }
+}
