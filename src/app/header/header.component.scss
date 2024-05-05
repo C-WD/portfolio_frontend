@@ -43,7 +43,12 @@ $header-height: 5rem;
               height: 2.5rem;
           }
       }
-
+      .header-links-web{
+        .header-items.active a{
+            color: black;
+            filter: blur(0);
+        }
+      }
       [class*="header-links"]{
           display: flex;
           flex-wrap: nowrap;
@@ -177,14 +182,13 @@ $header-height: 5rem;
               top: $header-height;
               right: -50rem;
               width: fit-content;
-              gap: 30px;
               max-width: 50%;
               height: fit-content;
-              padding: 2rem;
               flex-direction: column;
               align-items: end;
-              padding-right: 1.5rem;
               transition: 0.4s all ease-out;
+              padding: 0;
+                 width: 112px;
               &.link-flex{
                   display: flex;
               }
@@ -193,6 +197,20 @@ $header-height: 5rem;
               }
               div a{
                   filter: none!important;
+              }
+              .header-items.active a{
+            color: rgb(0, 0, 0);
+          
+              }
+              .header-items{
+                width: 100%;
+                padding-block: 1rem;
+               a{
+                text-align: center;
+               }
+                &.active{
+                    background-color: #2d2d2d48;
+                }
               }
           }
       }

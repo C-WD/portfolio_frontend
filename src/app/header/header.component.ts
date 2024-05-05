@@ -40,4 +40,8 @@ export class HeaderComponent {
         }
       }
     }
+    closeHeader(){
+      this.headerOpened = false;
+      this.mobileFlex = false;
+    }
 }
