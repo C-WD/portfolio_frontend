@@ -12,6 +12,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HeroComponent } from '../../components/hero/hero.component';
 import { ReferencesComponent } from '../../components/references/references.component';
+import { LatestWorkComponent } from '../../components/latest-work/latest-work.component';
 
 
 
@@ -24,6 +25,7 @@ import { ReferencesComponent } from '../../components/references/references.comp
     ServicosComponent,
     HeroComponent,
     ReferencesComponent,
+    LatestWorkComponent,
   ],
   imports: [
     CommonModule,

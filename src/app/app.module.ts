@@ -13,6 +13,7 @@ import { HomeModule } from './pages/home/home.module';
     AppComponent,
     HeaderComponent,
     ContatoComponent,
+
   ],
   imports: [
     HomeModule,

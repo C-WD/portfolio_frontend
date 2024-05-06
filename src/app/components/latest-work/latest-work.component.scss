@@ -1,0 +1,66 @@
+@mixin mobileG() {
+    @media screen and (max-width: 50rem) {
+        @content;
+    }
+}
+
+.latest-work {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    .title {
+        display: block;
+        margin: 0 auto;
+        width: fit-content;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 42px;
+        text-align: center;
+        color: #2D2D2D;
+        margin-bottom: 4rem;
+    }
+
+    .cards {
+        padding-inline: 2rem;
+        justify-content: space-around;
+        $gap: 67.5px;
+        display: flex;
+        max-width: 100%;
+        gap: $gap;
+        flex-wrap: wrap;
+        @include mobileG() {
+            justify-content: center;
+        }
+        .card {
+            flex-basis: calc(300px - $gap);
+            max-width: 300px;
+            margin: 0 auto;
+            @include mobileG() {
+                flex-basis: 100%;
+            }
+
+            img {
+                display: block;
+                max-width: 300px;
+                width: 100%;
+                margin-bottom: 25px;
+            }
+
+            .work-title {
+                font-weight: 600;
+                font-size: 20px;
+                margin-bottom: 15px;
+                line-height: 30px;
+                color: #2D2D2D;
+            }
+
+            .work-subtitle {
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 27px;
+                color: #2D2D2D;
+
+            }
+        }
+    }
+}

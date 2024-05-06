@@ -1,0 +1,10 @@
+<section class="latest-work">
+    <h3 class="title">My latest work</h3>
+    <div class="cards">
+        <div class="card" *ngFor="let latestWork of latestWorks">
+            <img src="{{latestWork.imageurl}}" alt="{{latestWork.title + ' characteristic image'}}">
+            <h3 class="work-title">{{latestWork.title}}</h3>
+            <p class="work-subtitle">{{latestWork.subtitle}}</p>
+        </div>
+    </div>
+</section>
